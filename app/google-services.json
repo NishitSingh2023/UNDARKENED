@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "240190575262",
+    "firebase_url": "https://undarkened-965d5.firebaseio.com",
+    "project_id": "undarkened-965d5",
+    "storage_bucket": "undarkened-965d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240190575262:android:1634ee8af76668f31c218f",
+        "android_client_info": {
+          "package_name": "com.example.undarkened"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240190575262-7gra1i4c1a5trlr58cgau1nrlb5l560f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.undarkened",
+            "certificate_hash": "8326b5919734a77c50822b6cc4b54397df76f618"
+          }
+        },
+        {
+          "client_id": "240190575262-vel1i6rnljtvnp7otnqa0qaiv6f0beaf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_RHmMuXcwW9APS3Kt4fD-XmPVJxaS-A8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240190575262-vel1i6rnljtvnp7otnqa0qaiv6f0beaf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
