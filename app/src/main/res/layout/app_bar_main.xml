@@ -28,17 +28,17 @@
                 android:layout_margin="0dp"
                 android:orientation="horizontal">
 
-            <ImageView
-                android:layout_gravity="left"
-                android:id="@+id/imageView3"
-                android:layout_width="0dp"
-                android:layout_weight="2"
-                android:layout_height="70dp"
-                app:srcCompat="@drawable/nav_logo" />
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="20dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="left"
+                    android:layout_weight="2"
+                    app:srcCompat="@drawable/nav_logo" />
 
-            <TextView
+                <TextView
                 android:id="@+id/textView"
-                android:layout_weight="13"
+                android:layout_weight="16"
                 android:layout_width="0dp"
                 android:layout_height="70dp"
                 android:gravity="center"
@@ -49,9 +49,27 @@
 
             </LinearLayout>
 
-            <androidx.appcompat.widget.ActionMenuView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#070606">
+
+        <Button
+            android:id="@+id/button_plan"
+            style="@android:style/Widget.DeviceDefault.Button.Inset"
+            android:layout_width="206dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="125dp"
+            android:text="Make A Plan" />
+
+    </RelativeLayout>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
