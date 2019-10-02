@@ -1,5 +1,6 @@
 package com.example.undarkened;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -20,10 +21,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    private Button makePlan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,20 @@ public class MainActivity extends AppCompatActivity {
         /*NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);*/
+
+
+
+        makePlan = (Button) findViewById(R.id.button_plan);
+        makePlan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity();
+            }
+        });
+    }
+    public void openActivity(){
+        Intent intent = new Intent(this, MakePlan.class);
+        startActivity(intent);
     }
 
     @Override
