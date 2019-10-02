@@ -37,7 +37,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="105dp"
-        android:ems="10"/>
+        android:ems="10"
+        android:freezesText="false"
+        android:visibility="visible" />
 
     <TextView
         android:id="@+id/textView5"
