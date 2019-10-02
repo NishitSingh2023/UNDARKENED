@@ -3,6 +3,7 @@ package com.example.undarkened;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,8 +22,15 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 public class Login_Activity extends AppCompatActivity {
+
+    DatabaseReference reference;
+    FirebaseUser fuser;
 
     //a constant for detecting the login intent result
     private static final int RC_SIGN_IN = 234;
@@ -103,7 +111,9 @@ public class Login_Activity extends AppCompatActivity {
 
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
         Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
-
+        final ProgressDialog pd = new ProgressDialog(this);
+        pd.setMessage("Signing In");
+        pd.show();
         //getting the auth credential
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
 
@@ -115,7 +125,20 @@ public class Login_Activity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            String userid = user.getUid();
+                            Toast.makeText(Login_Activity.this, ""+user.getEmail()+" "+user.getDisplayName()+" "+user.getPhoneNumber(), Toast.LENGTH_SHORT).show();
 
+                            DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference("Users").child(userid);
+
+                            HashMap<String, Object> map = new HashMap<>();
+
+                            map.put("email", user.getEmail());
+                            map.put("username", user.getDisplayName());
+                            map.put("phoneno", user.getPhoneNumber());
+                            Toast.makeText(Login_Activity.this, ""+user.getEmail()+" "+user.getDisplayName()+" "+user.getPhoneNumber(), Toast.LENGTH_SHORT).show();
+
+                            reference1.updateChildren(map);
+                            pd.dismiss();
                             Toast.makeText(Login_Activity.this, "User Signed In", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(Login_Activity.this, MainActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -139,6 +162,7 @@ public class Login_Activity extends AppCompatActivity {
     //this method is called on click
     private void signIn() {
         //getting the google signin intent
+
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
 
         //starting the activity for result
