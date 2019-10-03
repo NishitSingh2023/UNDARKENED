@@ -32,12 +32,13 @@
         android:textStyle="normal|bold" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="105dp"
         android:ems="10"
+        android:hint="Enter data in 24 hr format(Ex:1300 for 1pm)"
         android:freezesText="false"
         android:visibility="visible" />
 
@@ -58,6 +59,20 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="210dp" />
+
+    <Button
+        android:id="@+id/sendtodatabase"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/calendarView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginBottom="44dp"
+        android:text="Submit" />
     android:inputType="time" />
 
 </RelativeLayout>
