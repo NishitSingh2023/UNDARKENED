@@ -11,8 +11,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="#00070505"
-        android:backgroundTint="#000000">
+        android:background="#4A148C"
+        android:backgroundTint="#61C96C9D">
 
         <Button
             android:id="@+id/button_plan"
