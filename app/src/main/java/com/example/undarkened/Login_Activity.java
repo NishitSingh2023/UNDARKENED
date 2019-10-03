@@ -126,7 +126,7 @@ public class Login_Activity extends AppCompatActivity {
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             String userid = user.getUid();
-                            Toast.makeText(Login_Activity.this, ""+user.getEmail()+" "+user.getDisplayName()+" "+user.getPhoneNumber(), Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(Login_Activity.this, ""+user.getEmail()+" "+user.getDisplayName()+" "+user.getPhoneNumber(), Toast.LENGTH_SHORT).show();
 
                             DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference("Users").child(userid);
 
@@ -135,7 +135,7 @@ public class Login_Activity extends AppCompatActivity {
                             map.put("email", user.getEmail());
                             map.put("username", user.getDisplayName());
                             map.put("phoneno", user.getPhoneNumber());
-                            Toast.makeText(Login_Activity.this, ""+user.getEmail()+" "+user.getDisplayName()+" "+user.getPhoneNumber(), Toast.LENGTH_SHORT).show();
+                           // Toast.makeText(Login_Activity.this, ""+user.getEmail()+" "+user.getDisplayName()+" "+user.getPhoneNumber(), Toast.LENGTH_SHORT).show();
 
                             reference1.updateChildren(map);
                             pd.dismiss();

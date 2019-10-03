@@ -56,7 +56,7 @@
             android:textColor="#673AB7"
             android:textSize="36sp" />
 
-        <ListView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/db_list"
             android:layout_width="wrap_content"
             android:layout_height="448dp"
