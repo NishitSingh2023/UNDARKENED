@@ -7,7 +7,7 @@
     tools:context=".ui.home.HomeFragment">
 
     <RelativeLayout
-        android:layout_width="445dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -17,15 +17,12 @@
         <Button
             android:id="@+id/button_plan"
             style="@android:style/Widget.DeviceDefault.Button.Inset"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
-            android:layout_marginStart="53dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="77dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="81dp"
             android:gravity="center_horizontal"
             android:text="MAKE A PLAN!"
             android:textAlignment="center" />
@@ -61,7 +58,7 @@
 
         <ListView
             android:id="@+id/db_list"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="448dp"
             android:layout_alignParentTop="true"
             android:layout_marginTop="210dp" />
