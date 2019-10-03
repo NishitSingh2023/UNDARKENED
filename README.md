@@ -8,9 +8,10 @@ Our app uses GPS to show the location of nearby women user and they can contact 
 This app will surely bring changes in women life and help them to travel more freely.
 ## Build With
 * Android Studio
+## Database Used
+* Firebase
 ## Requirement
 * It runs on all Anrdoid Devices above Android 6.0
-## 
 ## Contact Developer
 * email at @ns2023@gmail.com
 ## Contributers
