@@ -10,10 +10,10 @@ This app will surely bring changes in women life and help them to travel more fr
 * Android Studio
 ## Requirement
 * It runs on all Anrdoid Devices above Android 6.0
-## About Developers
-* Nishit Singh
-* Robin Dhull 
-* Virender Rana  
-* Priynashu Saini 
+## Contact Developer
+* email at @ns2023@gmail.com
+## Contributers
+* Special thanks to
+* Robin Dhull, Virender Rana, Priyanshu Saini
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details
