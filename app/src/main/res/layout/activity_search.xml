@@ -1,19 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
-    android:orientation="vertical"
-    android:layout_gravity="center"
-    android:gravity="center"
-    tools:context=".Flash_Page">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#4A148C"
+    android:backgroundTint="#61C96C9D"
+    tools:context="com.example.undarkened.Search">
 
-    <ImageView
+    <Button
+        android:text="Start"
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:layout_gravity="center"
-        android:src="@drawable/logo"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/button"
+        android:onClick="Start" />
 
-</LinearLayout>
+    <Button
+        android:text="Connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button2"
+        android:onClick="Connect" />
+
+    <Button
+        android:text="Disconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/button3"
+        android:onClick="Disconnect" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/button"
+        android:id="@+id/videoFrame">
+
+    </FrameLayout>
+</RelativeLayout>

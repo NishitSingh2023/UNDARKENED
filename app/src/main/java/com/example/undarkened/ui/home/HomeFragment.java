@@ -17,6 +17,7 @@ import com.example.undarkened.Adapter.PlanAdapter;
 import com.example.undarkened.MakePlan;
 import com.example.undarkened.Model.Plan;
 import com.example.undarkened.R;
+import com.example.undarkened.Search;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,7 +28,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
-Button makePlan;
+    Button makePlan;
+    Button search;
     View v;
     DatabaseReference reference;
     RecyclerView recyclerView;
@@ -48,6 +50,15 @@ Button makePlan;
         });
         planlist=new ArrayList<>();
         reference = FirebaseDatabase.getInstance().getReference("plan");
+
+        search = (Button) v.findViewById(R.id.searchbtn);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openvideocall();
+            }
+        });
+
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
@@ -69,5 +80,10 @@ Button makePlan;
     public void openActivity(){
         Intent intent = new Intent(v.getContext(), MakePlan.class);
         startActivity(intent);
+    }
+    public void openvideocall(){
+        Intent i = new Intent(v.getContext(), Search.class);
+        startActivity(i);
+
     }
 }

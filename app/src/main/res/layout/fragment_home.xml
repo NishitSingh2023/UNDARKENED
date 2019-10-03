@@ -63,5 +63,14 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="210dp" />
 
+        <Button
+            android:id="@+id/searchbtn"
+            style="@android:style/Widget.Button.Inset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="77dp"
+            android:text="SEARCH" />
+
     </RelativeLayout>
 </FrameLayout>
