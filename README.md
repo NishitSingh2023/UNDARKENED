@@ -18,7 +18,6 @@ This app will surely bring changes in women life and help them to travel more fr
 * Firebase
 
 ## Features
--------
 - Open Source
 - Adpative Layout
 - Data Saved in Firebase(Online)
