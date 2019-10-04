@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#957246B8"
-    tools:context=".search">
+    tools:context=".Search">
 
     <TextView
         android:id="@+id/textView2"
