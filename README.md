@@ -41,11 +41,13 @@ com.google.android.gms:play-services-auth:17.0.0
 ## Requirement
 * It runs on all Anrdoid Devices above Android 6.0
 
-## Contact Developer
-* email at @ns2023@gmail.com
+## Contact Developers
+- ns2023@gmail.com
+- virender.rana0009@gmail.com
+- rishabhanand33@gmail.com
 
 ## Contributers
 * Special thanks to Robin Dhull, Virender Rana, Priyanshu Saini, Rishabh Anand
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/NishitSingh2023/UNDARKENED/blob/master/LICENSE) file for details
