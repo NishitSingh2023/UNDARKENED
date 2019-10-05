@@ -38,6 +38,11 @@ com.google.firebase:firebase-auth:16.0.5
 com.google.android.gms:play-services-auth:17.0.0
 ```
 
+
+## Vidyo.io
+- **Please Follow to steps mentioned in the [link](https://github.com/Vidyo/vidyo.io-helloworld-android) for video call**
+
+
 ## Requirement
 * It runs on all Anrdoid Devices above Android 6.0
 
